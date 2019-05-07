@@ -5,6 +5,7 @@ import Messages from './Messages'
 
 const ChatField = (props) => {
   const { signout, user } = useContext(AuthContext)
+  console.log(user)
 
   function logout() {
     signout()

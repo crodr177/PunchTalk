@@ -67,6 +67,7 @@ export const AuthProvider = props => {
         .then(resp => {
           const token = resp.data.token
           axios.defaults.headers.common.Authorization = "Bearer " + token
+          window.localStorage.setItem("authtoken", token)
           setUser(getUser())
           setAuthenticated(true)
           resolve()

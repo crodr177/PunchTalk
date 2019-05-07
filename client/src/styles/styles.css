@@ -89,7 +89,7 @@ body {
   flex-direction: column;
   width: 270px;
   background-color: white;
-  height: 1000px;
+  height: 700px;
   border-top-right-radius: 5px;
 }
 
@@ -117,7 +117,7 @@ body {
 
 .messages-column {
   width: 730px;
-  padding: 20px;
+  padding: 0px 20px;
 }
 
 #message-list {
@@ -167,7 +167,7 @@ body {
   color: white;
 }
 
-#message-field {
+#message-list {
   max-height: 500px;
   overflow: auto;
 }
@@ -179,6 +179,22 @@ body {
 }
 
 #message-list li p:nth-child(2) {
-  border-bottom: 1px dashed black;
+  font-size: 20px;
+  margin: 0px;
+}
+
+#message-list li p:nth-child(3) {
+  color: rgb(80, 79, 79);
+  font-size: 14px;
   margin-top: 0px;
+  border-bottom: 1px dashed black;
+}
+
+#messages-typing {
+  margin-top: 0;
+  font-size: 25px;
+}
+
+#messages-typing span {
+  color: white;
 }

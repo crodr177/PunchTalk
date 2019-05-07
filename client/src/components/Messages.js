@@ -1,25 +1,30 @@
-import React , { useContext } from 'react'
+import React, { useRef, useEffect } from 'react'
 import { connect } from 'react-redux'
-import { AuthContext } from "../lib/auth"
 
 const Messages = (props) => {
-  const { user } = useContext(AuthContext)
+  const chatBottom = useRef(null)
+
+  useEffect(() => {
+    chatBottom.current.scrollIntoView({ behavior: "smooth"})
+  }, [props.messages])
 
   return(
     <div id="message-field">
-      <p>Messages: {props.isTyping? "typing...": ''}</p>
+      <p id="messages-typing">Messages: <span>{props.isTyping? "typing...": ''}</span></p>
       <ul id="message-list">
         {
           props.messages.map((message, i) => (
-            <li className="message" key={"message-" + i}><p className="user">{user}</p><p className="text">{message}</p></li>
+            <li className="message" key={"message-" + i}><p className="user">{message.user}</p><p className="text">{message.text}</p><p>{message.time}</p></li>
           ))
         }
+        <div ref={chatBottom} />
       </ul>
     </div>
   )
 }
 
 function mapStateToProps(appState){
+  console.log(appState)
   return {
     messages: appState.messages,
     isTyping: appState.isTyping
