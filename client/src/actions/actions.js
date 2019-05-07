@@ -16,3 +16,14 @@ socket.on('new message', text => {
   })
 })
 
+export function setIsTyping(isTyping){
+  socket.emit('isTyping', isTyping)
+}
+
+socket.on('isTyping', isTyping => {
+  store.dispatch({
+    type: 'IS_TYPING',
+    payload: isTyping
+  })
+})
+

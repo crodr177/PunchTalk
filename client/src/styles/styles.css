@@ -7,23 +7,117 @@ html {
 }
 
 body {
-  background-color: rgb(79, 216, 79);
+  background-color: rgb(63, 177, 63);
+  margin: 0;
 }
 
 #main-container {
   font-family: Arial, Helvetica, sans-serif;
-  width: 1000px;
   margin: auto;
   display: flex;
   flex-direction: column;
-  margin-top: 25px;
+  margin-top: 0px;
 }
 
-#main-container h1 {
-  padding-left: 10px;
-  font-size: 72px;
+#main-container h2 {
+  text-align: center;
+  font-size: 46px;
   border: 7px solid black;
-  width: 39%;
+  width: 260px;
+  margin: 10px 0px 20px 10px;
+}
+
+.login {
+  width: 400px;
+  margin: 20px auto;
+}
+
+.pad {
+  padding: 20px;
+}
+
+.loginIcon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login .loginButton {
+  margin-top: 20px;
+  background-color: black;
+  color: white;
+}
+
+.login .loginButton:hover {
+  background-color: rgb(70, 69, 69);
+}
+
+.or {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 30px 0;
+  font-size: 18px;
+  text-align: center;
+  font-family: "Roboto";
+  font-weight: lighter;
+  width: 100%;
+}
+
+.or hr {
+  width: 40%;
+}
+
+.login .registerButton {
+  background-color: rgb(145, 221, 31);
+  color: white;
+}
+
+.login .registerButton:hover {
+  background-color: rgb(181, 238, 95);
+}
+
+#main-page {
+  width: 1000px;
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+}
+
+.main-column {
+  display: flex;
+  flex-direction: column;
+  width: 270px;
+  background-color: white;
+  height: 1000px;
+  border-top-right-radius: 5px;
+}
+
+.main-column h1 {
+  padding-left: 5px;
+  margin-top: 0px;
+  background-color: black;
+  color: white;
+  border-top-right-radius: 5px;
+}
+
+.main-column button {
+  width: 80%;
+  height: 30px;
+  margin: 10px auto;
+  border-radius: 5px;
+  border: 2px solid black;
+  font-size: 18px;
+}
+
+.main-column button:hover {
+  color: white;
+  background-color: black;
+}
+
+.messages-column {
+  width: 730px;
+  padding: 20px;
 }
 
 #message-list {
@@ -71,4 +165,20 @@ body {
 #input-field button:hover {
   background-color: black;
   color: white;
+}
+
+#message-field {
+  max-height: 500px;
+  overflow: auto;
+}
+
+#message-list li p:nth-child(1) {
+  color: white;
+  font-size: 24px;
+  margin-bottom: 0px;
+}
+
+#message-list li p:nth-child(2) {
+  border-bottom: 1px dashed black;
+  margin-top: 0px;
 }

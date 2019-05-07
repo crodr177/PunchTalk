@@ -5,6 +5,10 @@ const initSocket = function(io) {
     socket.on('new message', text => {
       io.emit('new message', text)
     })
+
+    socket.on('isTyping', isTyping => {
+      io.emit('isTyping', isTyping)
+    })
   })
 }
 
