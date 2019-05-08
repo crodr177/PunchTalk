@@ -78,7 +78,7 @@ body {
 }
 
 #main-page {
-  width: 1000px;
+  width: 1200px;
   display: flex;
   flex-direction: row;
   margin: 0;
@@ -168,7 +168,7 @@ body {
 }
 
 #message-list {
-  max-height: 500px;
+  max-height: 550px;
   overflow: auto;
 }
 
@@ -197,4 +197,29 @@ body {
 
 #messages-typing span {
   color: white;
+}
+
+#user-list {
+  width: 200px;
+  padding-left: 10px;
+}
+
+#user-list h1 {
+  font-size: 28px;
+  margin-top: 0px;
+  text-decoration: underline;
+}
+
+#users {
+  max-height: 550px;
+  overflow: auto;
+  margin-left: 0;
+  padding: 0;
+}
+
+#users li {
+  list-style: none;
+  color: white;
+  font-size: 24px;
+  font-weight: bolder;
 }

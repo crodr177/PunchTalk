@@ -1,15 +1,21 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { AuthContext } from "../lib/auth"
 import Input from './Input'
 import Messages from './Messages'
+import UserList from './UserList'
+import { getUser } from '../actions/actions'
 
 const ChatField = (props) => {
   const { signout, user } = useContext(AuthContext)
-  console.log(user)
+
+  useEffect(() => {
+    getUser(user)
+  })
 
   function logout() {
     signout()
     props.history.push("/")
+    window.location.reload();
   }
 
   return (
@@ -21,6 +27,9 @@ const ChatField = (props) => {
       <div className="messages-column">
         <Messages/>
         <Input/>
+      </div>
+      <div className="userlist-column">
+        <UserList/>
       </div>
     </div>
   )

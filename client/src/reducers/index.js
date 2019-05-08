@@ -1,6 +1,7 @@
 const initialState = {
   messages: [],
-  isTyping: ''
+  isTyping: '',
+  userList: []
 }
 
 export default function (state = initialState, action) {
@@ -9,6 +10,8 @@ export default function (state = initialState, action) {
       return{...state, messages:[...state.messages, action.payload]}
     case 'IS_TYPING':
       return{...state, isTyping: action.payload}
+    case 'GET_USER_LIST':
+      return{...state, userList: action.payload}
     default:
       return state
   }

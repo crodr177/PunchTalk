@@ -11,6 +11,7 @@ const Input = (props) => {
   function sendMessage(e) {
     e.preventDefault()
     sendText({text, user, time})
+    setText('')
   }
 
   function handleChange(e) {
@@ -25,7 +26,7 @@ const Input = (props) => {
 
   return (
     <form id="input-field" onSubmit={sendMessage}>
-      <input type="text" placeholder="enter message" onChange={handleChange}/>
+      <input type="text" value={text} placeholder="enter message" onChange={handleChange}/>
       <button type="submit">Send</button>
     </form>
   )

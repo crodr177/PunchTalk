@@ -24,7 +24,6 @@ const Messages = (props) => {
 }
 
 function mapStateToProps(appState){
-  console.log(appState)
   return {
     messages: appState.messages,
     isTyping: appState.isTyping
